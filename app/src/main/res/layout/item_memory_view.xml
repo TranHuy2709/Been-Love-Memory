@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iconDecoration"
+        android:layout_width="40dp"
+        android:layout_height="250dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/item_decoration"/>
+
+    <TextView
+        android:id="@+id/txtMemoryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/iconDecoration"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/ants_valley"/>
+
+    <TextView
+        android:id="@+id/txtMemoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/iconDecoration"
+        android:layout_below="@+id/txtMemoryDate"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/ants_valley"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_toRightOf="@id/iconDecoration"
+        android:layout_below="@id/txtMemoryName"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <ImageView
+        android:id="@+id/imgMemory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/delete_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="35dp" />
+
+    <ImageView
+        android:id="@+id/imgUpdate"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/update_icon"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/imgDelete"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp" />
+
+</RelativeLayout>

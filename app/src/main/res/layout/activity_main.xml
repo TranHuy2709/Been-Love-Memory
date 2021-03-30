@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/pink"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/loginBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/beenlovememory"
+        android:textSize="35sp"
+        android:fontFamily="@font/ants_valley"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/loginEdtEmail"
+        android:hint="@string/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/loginBanner"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/loginEdtPasword"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/loginEdtEmail"
+        android:layout_marginTop="50dp"
+        />
+
+    <CheckBox
+        android:id="@+id/loginCbRemember"
+        android:text="@string/remember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginEdtPasword"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/loginBtnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintTop_toBottomOf="@id/loginCbRemember"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/loginTxtResetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resetPassword"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/loginBtnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/loginTxtRegister"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/loginTxtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/loginBtnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/loginTxtResetPassword"
+        android:layout_marginTop="30dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/loginProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

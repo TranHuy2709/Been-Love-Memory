@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/txtEventName"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/custom_male_text_view"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="Woman Day"
+        android:fontFamily="@font/ants_valley"/>
+
+    <TextView
+        android:id="@+id/txtEventDate"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_female_text_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="01/01"/>
+
+</RelativeLayout>

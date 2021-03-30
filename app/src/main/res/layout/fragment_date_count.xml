@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/txtBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/ants_valley"
+        android:text="Been Love Together"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/waveLoadingView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBanner"
+        android:layout_marginTop="20dp"
+        app:wlv_borderColor="@color/pink"
+        app:wlv_borderWidth="3dp"
+        app:wlv_shapeType="circle"
+        app:wlv_round_rectangle="true"
+        app:wlv_triangle_direction="north"
+        app:wlv_waveColor="@color/pink"
+        app:wlv_waveAmplitude="70"/>
+
+    <TextView
+        android:id="@+id/txtNumberOfDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtDay"
+        android:textSize="30sp"
+        android:fontFamily="@font/ants_valley"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/txtDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Days"
+        android:fontFamily="@font/ants_valley"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/waveLoadingView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:padding="2dp"
+        android:background="@drawable/custom_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waveLoadingView"
+        app:layout_constraintEnd_toStartOf="@id/relativeLayout2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/maleAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:padding="2dp"
+        android:background="@drawable/custom_image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout1"
+        app:layout_constraintTop_toBottomOf="@id/waveLoadingView">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/femaleAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/waveLoadingView"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout1"
+        app:layout_constraintEnd_toEndOf="@id/relativeLayout1"
+        android:layout_marginTop="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:padding="5dp"
+            android:background="@drawable/custom_female_text_view"
+            android:src="@drawable/male_symbol"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:id="@+id/maleHoroscope"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="32dp"
+            android:background="@drawable/custom_male_text_view"
+            android:gravity="center"
+            android:fontFamily="@font/ants_valley"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/waveLoadingView"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
+        android:layout_marginTop="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:padding="5dp"
+            android:src="@drawable/female_symbol"
+            android:background="@drawable/custom_male_text_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:id="@+id/femaleHoroscope"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="32dp"
+            android:background="@drawable/custom_female_text_view"
+            android:gravity="center"
+            android:fontFamily="@font/ants_valley"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/maleBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:text="27/09/1993"
+        android:textSize="18sp"
+        android:fontFamily="@font/ants_valley"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout3"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout3"
+        app:layout_constraintEnd_toEndOf="@id/relativeLayout3"/>
+
+    <TextView
+        android:id="@+id/femaleBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:text="23/01/1997"
+        android:textSize="18sp"
+        android:fontFamily="@font/ants_valley"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout4"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout4"
+        app:layout_constraintEnd_toEndOf="@id/relativeLayout4"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        app:layout_constraintTop_toBottomOf="@id/maleBirthday"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:src="@drawable/heart3png"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/year"
+            android:gravity="center"
+            android:fontFamily="@font/ants_valley"
+            android:text="10"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="70dp"
+
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout7"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout5"
+        app:layout_constraintTop_toBottomOf="@id/maleBirthday">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/heart3png" />
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/ants_valley"
+            android:gravity="center"
+            android:text="10"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
+        app:layout_constraintTop_toBottomOf="@id/femaleBirthday"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:src="@drawable/heart3png"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/week"
+            android:gravity="center"
+            android:fontFamily="@font/ants_valley"
+            android:text="10"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout5"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout5"
+        android:fontFamily="@font/ants_valley"
+        android:text="Year"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout6"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout6"
+        android:fontFamily="@font/ants_valley"
+        android:text="Month"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout7"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout7"
+        android:fontFamily="@font/ants_valley"
+        android:text="Week"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout8"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/first_date" />
+
+        <TextView
+            android:id="@+id/firstDate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingLeft="45dp"
+            android:fontFamily="@font/ants_valley"
+            android:gravity="center"
+            android:text="01/01/2021"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
