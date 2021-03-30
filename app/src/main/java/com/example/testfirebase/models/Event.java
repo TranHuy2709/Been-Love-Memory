@@ -2,7 +2,6 @@ package com.example.testfirebase.models;
 
 public class Event {
     private String date, name;
-    private boolean isUpcoming=false;
     private long time;
 
     public Event(){
@@ -29,14 +28,6 @@ public class Event {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public boolean isUpcoming() {
-        return isUpcoming;
-    }
-
-    public void setUpcoming(boolean upcoming) {
-        isUpcoming = upcoming;
     }
 
     public long getTime() {

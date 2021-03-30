@@ -70,7 +70,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     @Override
     public int getItemViewType(int position) {
         Event event= events.get(position);
-        if(event.isUpcoming()){
+        if(DateUtils.isUpcoming(event.getDate())){
             return UPCOMING_TYPE;
         }else {
             return  NORMAL_TYPE;
