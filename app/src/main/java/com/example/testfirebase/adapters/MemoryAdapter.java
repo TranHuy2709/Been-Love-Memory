@@ -114,8 +114,10 @@ public class MemoryAdapter extends RecyclerView.Adapter<MemoryAdapter.ViewHolder
         }
     }
 
+
     public interface MemoryOnClick{
         void onUpdate(int position);
         void onDelete(int position);
     }
+
 }

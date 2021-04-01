@@ -112,17 +112,19 @@ public class DateUtils {
     }
 
     public static boolean isUpcoming(String date){
-        int year= Calendar.getInstance().get(Calendar.YEAR);
+        Calendar todayTime= Calendar.getInstance();
+        int currentYear= todayTime.get(Calendar.YEAR);
+        int currentMonth= todayTime.get(Calendar.MONTH)+1;
+        int currentDay= todayTime.get(Calendar.DATE);
+        todayTime.set(currentYear, currentMonth, currentDay);
         String[] dates= date.split("/");
         Calendar eventTime= Calendar.getInstance();
         int day= Integer.parseInt(dates[0]);
         int month= Integer.parseInt(dates[1]);
-        eventTime.set(year, month, day);
-        if(eventTime.getTimeInMillis()- Calendar.getInstance().getTimeInMillis()>0 ){
-            long toCome= (eventTime.getTimeInMillis()- Calendar.getInstance().getTimeInMillis())/1000;
-            if(toCome<86400*7){
-                return true;
-            }
+        eventTime.set(currentYear, month, day);
+        long time= eventTime.getTimeInMillis() - todayTime.getTimeInMillis();
+        if(time>0 && time<7*86400*1000){
+            return true;
         }
         return false;
     }

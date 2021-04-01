@@ -142,15 +142,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-
-
-        String savedEmail= login.getString("email","");
-        String savedPassword= login.getString("password","");
-
-        if(email.equals(savedEmail) && pass.equals(savedPassword)){
-            startActivity(new Intent(MainActivity.this, MainAppActivity.class));
-            return;
-        }
         userSignIn(email,pass);
     }
 
@@ -220,8 +211,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onReceive(Context context, Intent intent) {
             if(intent.getBooleanExtra("ImageComplete",false)){
                 Toast.makeText(MainActivity.this,"Download image completed", Toast.LENGTH_SHORT).show();
-                login.edit().putString("email", userName.getText().toString().trim()).apply();
-                login.edit().putString("password",password.getText().toString().trim()).apply();
+//                login.edit().putString("email", userName.getText().toString().trim()).apply();
+//                login.edit().putString("password",password.getText().toString().trim()).apply();
                 if(cbRemember.isChecked()){
                     login.edit().putBoolean("loginStatus",true).apply();
                 }else {

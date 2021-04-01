@@ -103,7 +103,6 @@ public class LoveEventsFragment extends Fragment {
             String eventName= eventDetail[1];
             long time= DateUtils.getTime(eventDate);
             Event event= new Event(eventDate, eventName, time);
-            event.setUpcoming(DateUtils.isUpcoming(eventDetail[0]));
             events.add(event);
         }
         sortEvent(events);
